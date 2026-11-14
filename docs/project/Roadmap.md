@@ -1,39 +1,58 @@
-# Student Management System — Roadmap
+# Student Management System — Development Roadmap
 
-This roadmap is a working plan, not a promise that every item will be implemented. Update status as the project changes.
+This roadmap reflects the project's current direction. Items are marked according to the work known to be completed or still planned.
 
-## Phase 1 — Core Python and CLI
-- [x] Build initial CLI-based student-record application.
-- [x] Implement basic CRUD operations in the backend.
-- [x] Save and load records using JSON.
-- [ ] Review validation and edge cases.
+## Phase 1 — CLI and Backend Foundation
 
-## Phase 2 — GUI application
-- [x] Start separating GUI-related modules.
-- [ ] Complete login screen behavior.
-- [ ] Complete dashboard layout.
-- [ ] Connect GUI actions to backend functions.
-- [ ] Test add, view, search, update, and delete through the GUI.
+- [x] Create the first command-line Student Management System.
+- [x] Implement student insertion and viewing.
+- [x] Implement student search, update, and delete operations.
+- [x] Save and load student records using JSON.
+- [x] Use registration number as the main search identifier.
 
-## Phase 3 — Reliability and documentation
-- [ ] Add consistent input validation and error messages.
+## Phase 2 — Experiments and Code Organization
+
+- [x] Keep Python experiments in a separate `experiments/` folder.
+- [x] Create separate application modules for backend, login, dashboard, and authentication-related work.
+- [ ] Review experimental scripts and document which ideas are adopted by the main application.
+
+## Phase 3 — GUI Development
+
+- [x] Start GUI development.
+- [x] Create the login and dashboard module files.
+- [ ] Complete the login screen workflow.
+- [ ] Complete the dashboard interface.
+- [ ] Connect GUI actions to backend CRUD operations.
+- [ ] Test all CRUD operations through the GUI.
+- [ ] Improve validation and user-facing error messages.
+
+## Phase 4 — Project Quality
+
+- [ ] Test normal and invalid input cases.
+- [ ] Check duplicate registration-number handling.
 - [ ] Add safe sample data for demonstrations.
-- [ ] Document installation and execution steps.
-- [ ] Capture screenshots of completed features.
+- [ ] Keep README and technical documentation up to date.
+- [ ] Capture screenshots of completed application features.
 
-## Phase 4 — API (future)
-- [ ] Learn HTTP and REST API fundamentals.
-- [ ] Design API endpoints for student operations.
-- [ ] Implement and test a FastAPI service.
-- [ ] Connect the GUI to the API if appropriate.
+## Phase 5 — API Development (Future)
 
-## Phase 5 — Database (future)
+- [ ] Learn HTTP methods and REST API concepts.
+- [ ] Design endpoints for student-record operations.
+- [ ] Build an API service using FastAPI.
+- [ ] Test API requests and responses.
+- [ ] Evaluate whether the GUI should communicate with the backend through the API.
+
+## Phase 6 — Database (Future)
+
 - [ ] Compare JSON storage with relational database storage.
-- [ ] Design student tables and constraints.
-- [ ] Evaluate SQLite or PostgreSQL.
-- [ ] Migrate data and test CRUD operations.
+- [ ] Design a student table and define a primary key.
+- [ ] Evaluate SQLite and PostgreSQL.
+- [ ] Migrate sample records and test CRUD operations.
 
-## Later enhancements (scope to be confirmed)
-- [ ] PDF / Excel export.
-- [ ] Role-based access for admin, staff, and students.
-- [ ] Additional reporting and usability improvements.
+## Possible Enhancements
+
+- [ ] PDF and Excel report export.
+- [ ] Finalize administrator, staff, and student roles.
+- [ ] Improve reports and dashboard summaries.
+
+Future items should be moved to the completed section only after implementation and testing.

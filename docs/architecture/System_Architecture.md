@@ -1,57 +1,69 @@
 # System Architecture
 
-## 1. Current High-Level Design
+## 1. Current Architecture
 
-The project currently has a Python application layer and JSON-based file storage.
+The project currently uses Python for application logic and a JSON file for student-record storage. It began as a command-line application. GUI development is now organized into separate modules.
 
 ```text
-User
-  |
-  v
-GUI screens (login / dashboard — under development)
-  |
-  v
-Python backend (student CRUD operations)
-  |
-  v
-JSON storage (data/students.json)
+                 User
+                  |
+                  v
+       GUI development modules
+       login.py / Dashboard.py
+                  |
+                  v
+          Python backend
+             Backend.py
+                  |
+                  v
+          JSON data storage
+        data/students.json
 ```
 
-The original version used a command-line interface. The current work separates interface files and backend logic.
+This diagram represents the intended connection between the current modules. The GUI-to-backend integration should be verified as development continues.
 
-## 2. Known Project Modules
+## 2. Main Project Components
 
-| Path | Current purpose |
+| Component | Responsibility |
 |---|---|
-| `Backend.py` | Student CRUD and data handling |
-| `login.py` | Login interface |
-| `Dashboard.py` | Dashboard interface |
+| `Backend.py` | Student CRUD and data operations |
+| `login.py` | Login screen development |
+| `Dashboard.py` | Dashboard screen development |
 | `auth.py` | Authentication-related logic |
-| `data/students.json` | JSON student-record storage |
-| `experiments/` | Earlier CLI code and Python experiments |
+| `data/students.json` | Current student data file |
+| `experiments/` | Earlier CLI program and Python experiments |
+| `docs/` | Project documentation |
 
-These descriptions reflect the project structure discussed during development. Update them if module responsibilities change.
+## 3. Data Flow
 
-## 3. Current Data Flow
-1. A user initiates an operation through the application.
-2. The relevant Python logic handles the request.
-3. The backend reads or updates the JSON data.
-4. The application displays the result.
+The backend data flow for a student operation is:
 
-## 4. Planned Evolution
-A possible future architecture is:
+1. The application requests an operation, such as adding or searching for a student.
+2. Python backend logic processes the operation.
+3. The backend reads from or writes to `data/students.json`.
+4. The operation result is returned to the calling part of the application.
+
+## 4. Current Storage Design
+
+JSON is used for persistence at this stage. It keeps the initial project simple and allows the student records to be saved in a readable file.
+
+The current storage approach is suitable for the project's learning and early development stage. A relational database may be considered later as requirements grow.
+
+## 5. Planned Architecture Improvements
+
+A possible later design is:
 
 ```text
 GUI
  |
  v
-HTTP/REST API (planned)
+HTTP / REST API
  |
  v
-Python API service (e.g. FastAPI — planned)
+Python API service (FastAPI)
  |
  v
-Database (SQLite or PostgreSQL — planned)
+Relational database (SQLite or PostgreSQL)
 ```
 
-The API and database layers are future plans, not claims about the current implementation.
+This is a future architecture direction. The REST API and relational database are not represented as implemented parts of the current application.

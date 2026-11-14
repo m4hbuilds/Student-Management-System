@@ -1,12 +1,18 @@
-# Documentation Index
+# SMS Documentation
 
-Detailed project documentation is organized here:
+This folder contains the technical and project documentation for the Student Management System.
 
-- `project/Project_Overview.md` — purpose, objectives, current status, and future scope.
-- `project/Requirements.md` — initial functional and non-functional requirements.
-- `project/Roadmap.md` — development phases and planned work.
-- `architecture/System_Architecture.md` — current and planned architecture.
-- `development/Development_Log.md` — project milestones and experiments.
-- `database/JSON_Structure.md` — current JSON storage fields and example.
+## Documents
 
-These documents are working drafts. Keep them aligned with the actual code and mark planned features as planned until implemented.
+| Document | Description |
+|---|---|
+| `project/Project_Overview.md` | Project purpose, objectives, technologies, current status, and future scope |
+| `project/Requirements.md` | Student-record requirements and planned application requirements |
+| `project/Roadmap.md` | Development phases and progress |
+| `architecture/System_Architecture.md` | Current application components, data flow, and planned architecture |
+| `development/Development_Log.md` | Development milestones from the first CLI version to GUI work |
+| `database/JSON_Structure.md` | Current JSON storage location, fields, and sample structure |
+
+## Keeping Documentation Accurate
+
+Update these documents when the implementation changes. Clearly distinguish completed and tested features from planned work. Use dummy data in examples and never publish real student personal information.

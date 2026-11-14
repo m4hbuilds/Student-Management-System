@@ -1,49 +1,89 @@
 # Student Management System (SMS)
 
 ## 1. Introduction
-The Student Management System (SMS) is a college project intended to organize student information and make common student-record operations easier to perform.
 
-The project began as a command-line (CLI) Python application. It is being developed into a graphical application with a more organized code structure.
+The Student Management System (SMS) is a Python-based college project developed to manage student information through a computer application. The project started as a command-line program and is now being developed into a graphical application.
+
+The application is intended to make common student-record operations easier to perform and maintain. Student information is currently stored in a JSON file.
 
 ## 2. Problem Statement
-Managing student details manually or across separate files can make it harder to add, find, update, and remove records consistently. SMS aims to provide a single application for these basic student-record tasks.
 
-## 3. Objectives
-- Add and maintain student records.
-- View and search student information.
-- Update existing records.
-- Delete records when required.
-- Provide a graphical interface as development progresses.
-- Keep application code and data files organized.
+Student details need to be stored and retrieved accurately. Handling records manually or through disconnected files can make searching and updating information inconvenient. This project provides a structured application for performing basic student-record operations.
 
-## 4. Current Technical Foundation
-- Language: Python
-- Current data storage: JSON file (`data/students.json`)
-- Earlier interface: command-line interface
-- Current interface work: Tkinter / CustomTkinter-based GUI
-- Version control: Git and GitHub
+## 3. Project Objectives
 
-## 5. Student Record Fields
-The earlier backend uses these fields:
-- `Register_no`
-- `Name`
-- `Branch`
-- `Semister` (current code spelling)
-- `phone_no`
-- `Address`
+- Create and maintain student records.
+- Display and search for existing student information.
+- Update student details when changes are required.
+- Delete records when they are no longer needed.
+- Store data so that it remains available after the application closes.
+- Develop a graphical interface to make the application easier to use.
+- Improve the project gradually through testing and modular development.
 
-## 6. Development Status
-The Python backend has CRUD operations for inserting, viewing, searching, updating, and deleting student records. The project is being expanded with a GUI and separate login/dashboard modules.
+## 4. Technologies Used
 
-This document describes the known project state at the time it was written. Update it as implementation changes.
+| Technology | Use in the project |
+|---|---|
+| Python | Main programming language |
+| JSON | Current student-record storage |
+| Tkinter / CustomTkinter | GUI development |
+| Git | Source-code version control |
+| GitHub | Remote repository and project history |
+| Visual Studio Code | Development environment |
 
-## 7. Future Scope
-Planned or considered improvements include:
-- Complete and connect the GUI screens to the backend.
-- Expose backend operations through an HTTP/REST API.
-- Introduce a relational database such as SQLite or PostgreSQL.
-- Improve validation, error handling, and project documentation.
-- Add PDF/Excel export features if they remain in the project scope.
+The exact GUI library used by each screen should be kept consistent with the implementation as the interface develops.
 
-## 8. Project Owner
-Add your preferred author name, institute details, and academic year before formal submission.
+## 5. Student Information
+
+The current backend uses the following student fields:
+
+| Field | Description |
+|---|---|
+| `Register_no` | Student registration number |
+| `Name` | Student name |
+| `Branch` | Student's academic branch |
+| `Semister` | Semester (spelling used in the current code) |
+| `phone_no` | Contact number |
+| `Address` | Student address |
+
+The registration number is intended to be the main identifier for locating a student record.
+
+## 6. Implemented Work
+
+The Python backend has been developed with basic CRUD operations:
+
+- Insert a student record.
+- View student records.
+- Search for a student.
+- Update student details.
+- Delete a student record.
+- Save and load student data using JSON.
+
+The first version provided these operations through a command-line interface. The project now includes separate files for backend logic, login, dashboard, and authentication-related development.
+
+## 7. Current Development Status
+
+The project is transitioning from its original CLI implementation to a GUI-based application. The repository contains `Backend.py`, `login.py`, `Dashboard.py`, and `auth.py`, along with a `data` directory for JSON storage.
+
+The presence of these files does not mean every screen or workflow is fully integrated. GUI completion and connection to backend operations remain part of the development work.
+
+## 8. Future Scope
+
+The following improvements are under consideration or planned:
+
+- Complete the GUI and connect its screens to backend operations.
+- Improve input validation and error handling.
+- Introduce an HTTP/REST API, potentially using FastAPI.
+- Evaluate moving from JSON storage to SQLite or PostgreSQL.
+- Add PDF or Excel report export if it fits the final project requirements.
+- Improve testing and technical documentation.
+
+## 9. Project Information
+
+- **Project:** Student Management System (SMS)
+- **Developer:** Thangedupalli Mahesh
+- **Programme:** Diploma in Computer Science and Engineering
+- **Institution:** M.N. Technical Institute
+- **Expected completion:** 2027
+
+Review institution spelling and academic details before using this document for formal submission.

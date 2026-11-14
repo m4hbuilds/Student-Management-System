@@ -1,39 +1,63 @@
 # Student Management System — Requirements
 
-> This is an initial working requirements document. Confirm each item against the final project scope before academic submission.
+## 1. Purpose
 
-## 1. Functional Requirements
+This document describes the main requirements for the Student Management System. It distinguishes the student-record functions already developed in the Python backend from interface and infrastructure work that is still being developed.
 
-### Student records
-- The application should allow a user to add a student record.
-- The application should display stored student records.
-- The application should search for a student using the registration number.
-- The application should update an existing student record.
-- The application should delete a student record.
+## 2. Functional Requirements
 
-### Data fields
-A student record currently uses:
-- Registration number (`Register_no`)
-- Name (`Name`)
-- Branch (`Branch`)
-- Semester (`Semister`)
-- Phone number (`phone_no`)
-- Address (`Address`)
+### 2.1 Student record management
 
-### Interface
-- The project is being developed from a CLI program into a GUI application.
-- Login and dashboard screens exist in the current development structure; their final behavior and access rules should be documented after implementation is complete.
+The backend should support the following operations:
 
-## 2. Non-Functional Requirements
-- Store records consistently and preserve them between program runs.
-- Keep code organized into understandable modules.
-- Validate user input before saving changes.
-- Show useful messages when an operation succeeds or fails.
-- Avoid committing real student personal information to a public repository.
+1. **Insert:** Add a student record containing registration number, name, branch, semester, phone number, and address.
+2. **View:** Display the student records stored by the application.
+3. **Search:** Find a student using the registration number.
+4. **Update:** Modify the details of an existing student.
+5. **Delete:** Remove a selected student record.
 
-## 3. Items to Confirm
-- Exact user roles and permissions.
-- Whether student/staff self-registration will be included.
-- Final authentication and password-storage design.
-- Whether the final storage will remain JSON or move to a database.
-- Minimum supported Python version and operating system.
+These CRUD operations have been implemented in the Python backend.
+
+### 2.2 Data storage
+
+- Student data is currently stored in `data/students.json`.
+- The application should load saved records when required.
+- Changes should be written back to the JSON file.
+- Registration numbers should be treated as the main record identifier.
+
+### 2.3 Graphical interface
+
+The project is being developed with a graphical interface. The repository currently includes login and dashboard modules. The screens must be connected to the backend and tested before the GUI can be considered complete.
+
+### 2.4 Authentication
+
+The repository includes `auth.py` and `login.py` for authentication-related development. Final login rules, account creation, password handling, and role permissions must be confirmed and tested before being described as completed functionality.
+
+## 3. Non-Functional Requirements
+
+- **Usability:** The GUI should present student operations clearly.
+- **Data consistency:** Record changes should be saved correctly.
+- **Validation:** Required fields and registration numbers should be checked before saving.
+- **Maintainability:** Interface, backend, and data-handling responsibilities should remain organized.
+- **Reliability:** Errors such as missing records or invalid input should be handled with useful messages.
+- **Privacy:** Real student personal information should not be committed to a public repository.
+
+## 4. Current Student Record Fields
+
+| Field | Requirement |
+|---|---|
+| Registration number | Identify a student record |
+| Name | Store the student's name |
+| Branch | Store the academic branch |
+| Semester | Store the current semester |
+| Phone number | Store as text to preserve formatting |
+| Address | Store the student's address |
+
+## 5. Future Requirements
+
+The following are possible future improvements, not current completed features:
+
+- Provide a REST API for student operations.
+- Move data from JSON to a relational database.
+- Add report generation in PDF or Excel format.
+- Finalize role-based access for administrator, staff, and student users.

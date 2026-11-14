@@ -1,37 +1,72 @@
 # Development Log
 
-Use this file to record meaningful milestones. Add dates and details as work is completed.
+This document records the development journey of the Student Management System, from the first command-line version to the current GUI development.
 
-## Starting point — CLI version
-- Created an initial command-line Student Management System in Python.
-- Implemented student-record CRUD operations.
-- Used JSON file storage.
+## Milestone 1 — First CLI Application
 
-## Python experiments
-The `experiments/` directory contains small programs written while learning and testing ideas for the application. Examples include:
-- `gender.py`
-- `name.py`
-- `otp.py`
-- `p1.py`
-- `sample.py`
-
-Keep a short note beside each experiment explaining what you tested and whether it was adopted in the main application.
-
-## GUI development
-- Began separating the application into interface and backend modules.
-- Added files for login, dashboard, and authentication-related work.
-- Continue recording which screens are complete and which are still being connected to backend operations.
-
-## Milestone template
-
-### YYYY-MM-DD — Milestone title
-**Goal:** What you wanted to achieve.
+**Goal:** Build an initial Student Management System in Python and practise basic student-record operations.
 
 **Work completed:**
-- ...
+- Created the first command-line version of the project.
+- Added menu-driven student-record operations.
+- Started implementing CRUD functionality for student details.
 
-**Challenges / lessons:**
-- ...
+**Challenges and lessons:**
+- Practised organizing a Python program around separate operations.
+- Learned how to accept and process user input.
+- Built an initial understanding of how a student record can be represented in Python.
 
-**Next step:**
-- ...
+**Next step:** Improve record handling and introduce persistent storage.
+
+## Milestone 2 — JSON-Based Backend
+
+**Goal:** Save student records so they remain available after the program closes.
+
+**Work completed:**
+- Used JSON to store student records in `students.json`.
+- Implemented JSON loading and saving in the backend.
+- Developed insert, view, search, update, and delete operations.
+- Used registration number as the main search identifier.
+
+**Challenges and lessons:**
+- Practised reading and writing files with Python.
+- Fixed a file-opening mode issue during JSON saving.
+- Learned how to convert between Python data and JSON data.
+
+**Next step:** Keep backend logic organized and begin developing a graphical interface.
+
+## Milestone 3 — Python Experiments
+
+**Goal:** Test small Python ideas and validation logic that could support the main application.
+
+**Work completed:**
+- Created separate experimental scripts in the `experiments/` folder.
+- Worked on small exercises involving names, gender validation, and OTP-related logic.
+- Kept practice code separate from the main application modules.
+
+**Challenges and lessons:**
+- Used small programs to test ideas before considering their use in the main project.
+- Practised breaking a larger learning task into smaller experiments.
+
+**Next step:** Retain useful experiments and move suitable, tested logic into the main application only when needed.
+
+## Milestone 4 — GUI Development Started
+
+**Goal:** Move the project from a command-line workflow toward a graphical application.
+
+**Work completed:**
+- Started separating GUI-related code into its own files.
+- Added `login.py` for login-screen development.
+- Added `Dashboard.py` for dashboard development.
+- Added `auth.py` for authentication-related logic.
+- Continued keeping backend operations in `Backend.py`.
+
+**Challenges and lessons:**
+- Began learning how GUI screens and backend functions should work together.
+- Identified the need to keep interface code separate from data operations.
+
+**Next step:** Complete the screens and connect their actions to the backend.
+
+## How to Add Future Entries
+
+For each new milestone, add a dated section with the actual work completed, problems encountered, and the next task. Do not mark a feature as complete until it has been implemented and tested.
